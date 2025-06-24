@@ -170,9 +170,9 @@ class HanariBakerySystem:
         if len(self.produk_list) == 0:
             print("Tidak ada produk yang tersedia.")
             return
-        print("="*50)
-        print("           DAFTAR PRODUK HANARI BAKERY")
-        print("="*50)
+        print("========================================")
+        print("       DAFTAR PRODUK HANARI BAKERY")
+        print("========================================")
         for i in range(len(self.produk_list)):
             produk = self.produk_list[i]
             print(f"{produk.nama} ({produk.kode})")
@@ -181,14 +181,14 @@ class HanariBakerySystem:
             profit_per_pcs = produk.hitung_profit_per_produksi() / produk.jumlah_pcs
             print("Profit per pcs: Rp", int(profit_per_pcs))
             print("Profit per Produksi: Rp", produk.hitung_profit_per_produksi())
-            print("-" * 50)
+            print("========================================")
     def kalkulator_profit(self):
         if len(self.produk_list) == 0:
             print("Tidak ada produk yang tersedia.")
             return
-        print("="*40)
+        print("========================================")
         print("        KALKULATOR ESTIMASI PROFIT")
-        print("="*40)
+        print("========================================")
         print("Pilih jenis produk:")
         for i in range(len(self.produk_list)):
             print(str(i+1) + ". " + self.produk_list[i].nama)
@@ -201,14 +201,14 @@ class HanariBakerySystem:
                     print("Jumlah harus lebih dari 0!")
                     return
                 estimasi = produk.estimasi_profit(jumlah)
-                print("="*50)
+                print("========================================")
                 print("       ESTIMASI PROFIT -", produk.nama.upper())
-                print("="*50)
+                print("========================================")
                 print("Jumlah Produksi      :", int(estimasi['jumlah_produksi']), "pcs")
                 print("Total Biaya Produksi : Rp", int(estimasi['total_biaya_produksi']))
                 print("Total Penjualan      : Rp", int(estimasi['total_penjualan']))
                 print("Estimasi Profit      : Rp", int(estimasi['estimasi_profit']))
-                print("="*50)  
+                print("========================================")  
             else:
                 print("Pilihan tidak valid!")
         except ValueError:
@@ -217,9 +217,9 @@ class HanariBakerySystem:
         if len(self.produk_list) == 0:
             print("Tidak ada produk yang tersedia.")
             return
-        print("="*40)
-        print("         SIMULASI PROSES PRODUKSI")
-        print("="*40)
+        print("========================================")
+        print("        SIMULASI PROSES PRODUKSI")
+        print("========================================")
         print("Pilih produk untuk simulasi:")
         for i in range(len(self.produk_list)):
             print(str(i+1) + ". " + self.produk_list[i].nama)
@@ -227,9 +227,9 @@ class HanariBakerySystem:
             pilihan = int(input("\nMasukkan pilihan : ")) - 1
             if pilihan >= 0 and pilihan < len(self.produk_list):
                 produk = self.produk_list[pilihan]
-                print("="*60)
+                print("========================================")
                 print("    SIMULASI PRODUKSI:", produk.nama.upper())
-                print("="*60)
+                print("========================================")
                 print("\nTAHAP 1: PENGADONAN")
                 print(produk.pengadonan())
                 if produk.pengembangan() is not None:
@@ -242,7 +242,7 @@ class HanariBakerySystem:
                     print(produk.topping())
                 print("\nPRODUKSI SELESAI!")
                 print("Hasil:", produk.jumlah_pcs, "pcs", produk.nama)
-                print("="*60)
+                print("========================================")
             else:
                 print("Pilihan tidak valid!")
         except ValueError:
@@ -265,15 +265,15 @@ class HanariBakerySystem:
             print("Input tidak valid! Masukkan angka.")
     def run(self):
         while True:
-            print("="*50)
-            print("              SISTEM HANARI BAKERY")
-            print("="*50)
+            print("========================================")
+            print("          SISTEM HANARI BAKERY")
+            print("========================================")
             print("1. Tampilkan Semua Produk")
             print("2. Detail Produk")
             print("3. Kalkulator Estimasi Profit")
             print("4. Simulasi Proses Produksi")
             print("5. Keluar")
-            print("="*50)
+            print("========================================")
             pilihan = input("Pilih menu : ")
             if pilihan == '1':
                 self.tampilkan_semua_produk()
