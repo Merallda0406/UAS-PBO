@@ -181,6 +181,7 @@ class HanariBakerySystem:
             profit_per_pcs = produk.hitung_profit_per_produksi() / produk.jumlah_pcs
             print("Profit per pcs: Rp", int(profit_per_pcs))
             print("Profit per Produksi: Rp", produk.hitung_profit_per_produksi())
+            print("Jumlah Produk per Produksi: ", produk.jumlah_pcs, "/pcs")
             print("----------------------------------------")
     def kalkulator_profit(self):
         if len(self.produk_list) == 0:
