@@ -43,14 +43,14 @@ print("       DAFTAR PRODUK HANARI BAKERY")
 print("========================================")
 for i in range(len(self.produk_list)):
             produk = self.produk_list[i]
-            print(f"{produk.nama} ({produk.kode})")
-            print("Jenis Roti:", produk.jenis_roti())
-            print("Harga: Rp", produk.harga_jual, "/pcs")
+        print(f"{produk.nama} ({produk.kode})")
+        print("Jenis Roti:", produk.jenis_roti())
+        print("Harga: Rp", produk.harga_jual, "/pcs")
             profit_per_pcs = produk.hitung_profit_per_produksi() / produk.jumlah_pcs
-            print("Profit per pcs: Rp", int(profit_per_pcs))
-            print("Profit per Produksi: Rp", produk.hitung_profit_per_produksi())
-            print("Jumlah Produk per Produksi: ", produk.jumlah_pcs, "/pcs")
-            print("----------------------------------------")
+        print("Profit per pcs: Rp", int(profit_per_pcs))
+        print("Profit per Produksi: Rp", produk.hitung_profit_per_produksi())
+        print("Jumlah Produk per Produksi: ", produk.jumlah_pcs, "/pcs")
+        print("----------------------------------------")
 
 print("========================================")
 print("          HANARI BAKERY")
