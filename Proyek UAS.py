@@ -166,7 +166,7 @@ class HanariBakerySystem:
             Croissant(),
             ButterCookies(),
             Muffin() ]
-     def tambah_produk(self):
+    def tambah_produk(self):
         kode = input("Masukkan kode: ")
         nama = input("Masukkan nama: ")
         jenis = input("Jenis (rotimanis/croissant/kuekering): ")
