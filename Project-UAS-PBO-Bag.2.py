@@ -2,7 +2,6 @@
 #NIM : K3524016
 
 #fitur sistem toko roti hanari
-
 class SistemTokoHanari:
     def __init__(self):
         self.produk_list = []
@@ -35,8 +34,6 @@ class SistemTokoHanari:
         if len(self.produk_list) == 0:
             print("Tidak ada produk yang tersedia.")
             return
-        
-
 #menu sistem toko roti hanari
 print("========================================")
 print("       DAFTAR PRODUK HANARI BAKERY")
@@ -51,17 +48,16 @@ for i in range(len(self.produk_list)):
         print("Profit per Produksi: Rp", produk.hitung_profit_per_produksi())
         print("Jumlah Produk per Produksi: ", produk.jumlah_pcs, "/pcs")
         print("----------------------------------------")
-
-print("========================================")
-print("          HANARI BAKERY")
-print("========================================")
-print("1. Tambah Produk")
-print("2. Tampilkan Semua Produk")
-print("3. Detail Produk")
-print("4. Kalkulator Estimasi Profit")
-print("5. Simulasi Proses Produksi")
-print("6. Keluar")
-print("========================================")
+        print("========================================")
+        print("          HANARI BAKERY")
+        print("========================================")
+        print("1. Tambah Produk")
+        print("2. Tampilkan Semua Produk")
+        print("3. Detail Produk")
+        print("4. Kalkulator Estimasi Profit")
+        print("5. Simulasi Proses Produksi")
+        print("6. Keluar")
+        print("========================================")
 pilihan = input("Pilih menu : ")
     if pilihan == '1':
         self.tambah_produk()
