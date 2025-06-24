@@ -170,7 +170,7 @@ class HanariBakerySystem:
         if len(self.produk_list) == 0:
             print("Tidak ada produk yang tersedia.")
             return
-        print("\n"+"="*50)
+        print("="*50)
         print("           DAFTAR PRODUK HANARI BAKERY")
         print("="*50)
         for i in range(len(self.produk_list)):
@@ -186,7 +186,7 @@ class HanariBakerySystem:
         if len(self.produk_list) == 0:
             print("Tidak ada produk yang tersedia.")
             return
-        print("\n" + "="*40)
+        print("="*40)
         print("        KALKULATOR ESTIMASI PROFIT")
         print("="*40)
         print("Pilih jenis produk:")
@@ -201,7 +201,7 @@ class HanariBakerySystem:
                     print("Jumlah harus lebih dari 0!")
                     return
                 estimasi = produk.estimasi_profit(jumlah)
-                print("\n" + "="*50)
+                print("="*50)
                 print("       ESTIMASI PROFIT -", produk.nama.upper())
                 print("="*50)
                 print("Jumlah Produksi      :", int(estimasi['jumlah_produksi']), "pcs")
@@ -217,7 +217,7 @@ class HanariBakerySystem:
         if len(self.produk_list) == 0:
             print("Tidak ada produk yang tersedia.")
             return
-        print("\n" + "="*40)
+        print("="*40)
         print("         SIMULASI PROSES PRODUKSI")
         print("="*40)
         print("Pilih produk untuk simulasi:")
@@ -227,7 +227,7 @@ class HanariBakerySystem:
             pilihan = int(input("\nMasukkan pilihan : ")) - 1
             if pilihan >= 0 and pilihan < len(self.produk_list):
                 produk = self.produk_list[pilihan]
-                print("\n" + "="*60)
+                print("="*60)
                 print("    SIMULASI PRODUKSI:", produk.nama.upper())
                 print("="*60)
                 print("\nTAHAP 1: PENGADONAN")
@@ -265,7 +265,7 @@ class HanariBakerySystem:
             print("Input tidak valid! Masukkan angka.")
     def run(self):
         while True:
-            print("\n" + "="*50)
+            print("="*50)
             print("              SISTEM HANARI BAKERY")
             print("="*50)
             print("1. Tampilkan Semua Produk")
