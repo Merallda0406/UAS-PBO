@@ -1,3 +1,4 @@
+
 from abc import ABC, abstractmethod
 # Class Parent
 class ProduksiRoti(ABC):
@@ -168,15 +169,14 @@ class SistemTokoHanari:
             Muffin() ]
     def tambah_produk(self):
         kode = input("Masukkan kode: ")
-        nama = input("Masukkan nama: ")
-        jenis = input("Jenis (rotimanis/croissant/kuekering): ")
-        if jenis == "rotimanis":
+        nama = input("Masukkan nama: (rotimanis/croissant/kuekering): ")
+        if nama == "rotimanis":
             produk = RotiManis()
-        elif jenis == "croissant":
+        elif nama == "croissant":
             produk = Croissant()
-        elif jenis == "buttercookies":
+        elif nama == "buttercookies":
             produk = ButterCookies()
-        elif jenis == "muffin":
+        elif nama == "muffin":
             produk = Muffin()
         else:
             print("Jenis anggota tidak ada dalam daftar")
