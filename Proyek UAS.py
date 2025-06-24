@@ -181,7 +181,7 @@ class HanariBakerySystem:
             profit_per_pcs = produk.hitung_profit_per_produksi() / produk.jumlah_pcs
             print("Profit per pcs: Rp", int(profit_per_pcs))
             print("Profit per Produksi: Rp", produk.hitung_profit_per_produksi())
-            print("========================================")
+            print("----------------------------------------")
     def kalkulator_profit(self):
         if len(self.produk_list) == 0:
             print("Tidak ada produk yang tersedia.")
@@ -290,7 +290,7 @@ class HanariBakerySystem:
                 print("Pilihan tidak valid! Pilih antara 1-5.")
 # Program 
 def main():
-    print("     Selamat datang di Sistem Hanari Bakery!     ")
+    print("Selamat datang di Sistem Hanari Bakery!")
     bakery_system = HanariBakerySystem()
     bakery_system.run()
 if __name__ == "__main__":
