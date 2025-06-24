@@ -156,7 +156,7 @@ class Muffin(KueKering):
     def pemanggangan(self):
         return "Panggang dalam oven 180 derajat Celsius selama 18-22 menit hingga matang."
 # Fitur
-class HanariBakerySystem:
+class SistemTokoHanari:
     def __init__(self):
         self.produk_list = []
         self.init_produk_default()
@@ -286,7 +286,7 @@ class HanariBakerySystem:
     def run(self):
         while True:
             print("========================================")
-            print("          SISTEM HANARI BAKERY")
+            print("          HANARI BAKERY")
             print("========================================")
             print("1. Tampilkan Semua Produk")
             print("2. Detail Produk")
@@ -312,8 +312,8 @@ class HanariBakerySystem:
                 print("Pilihan tidak valid! Pilih antara 1-5.")
 # Program 
 def main():
-    print("Selamat datang di Sistem Hanari Bakery!")
-    bakery_system = HanariBakerySystem()
-    bakery_system.run()
+    print("Selamat datang di Hanari Bakery!")
+    sistem_toko = SistemTokoHanari()
+    sistem_toko.run()
 if __name__ == "__main__":
     main()
