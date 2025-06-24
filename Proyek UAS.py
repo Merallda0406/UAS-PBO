@@ -166,6 +166,25 @@ class HanariBakerySystem:
             Croissant(),
             ButterCookies(),
             Muffin() ]
+     def tambah_produk(self):
+        kode = input("Masukkan kode: ")
+        nama = input("Masukkan nama: ")
+        jenis = input("Jenis (rotimanis/croissant/kuekering): ")
+        if jenis == "rotimanis":
+            produk = RotiManis()
+        elif jenis == "croissant":
+            produk = Croissant()
+        elif jenis == "buttercookies":
+            produk = ButterCookies()
+        elif jenis == "muffin":
+            produk = Muffin()
+        else:
+            print("Jenis anggota tidak ada dalam daftar")
+            return
+        produk.kode = kode
+        produk.nama = nama
+        self.produk_list.append(produk)
+        print(f"Produk {nama} berhasil ditambahkan!")
     def tampilkan_semua_produk(self):
         if len(self.produk_list) == 0:
             print("Tidak ada produk yang tersedia.")
@@ -277,14 +296,16 @@ class HanariBakerySystem:
             print("========================================")
             pilihan = input("Pilih menu : ")
             if pilihan == '1':
-                self.tampilkan_semua_produk()
+                self.tambah_produk()
             elif pilihan == '2':
-                self.tampilkan_detail_produk()
+                self.tampilkan_semua_produk()
             elif pilihan == '3':
-                self.kalkulator_profit()
+                self.tampilkan_detail_produk()
             elif pilihan == '4':
-                self.simulasi_produksi()
+                self.kalkulator_profit()
             elif pilihan == '5':
+                self.simulasi_produksi()
+            elif pilihan == '6':
                 print("\nTerima kasih telah menggunakan Sistem Hanari Bakery!")
                 break
             else:
