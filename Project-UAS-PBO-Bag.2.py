@@ -34,43 +34,46 @@ class SistemTokoHanari:
         if len(self.produk_list) == 0:
             print("Tidak ada produk yang tersedia.")
             return
-#menu sistem toko roti hanari
-print("========================================")
-print("       DAFTAR PRODUK HANARI BAKERY")
-print("========================================")
-for i in range(len(self.produk_list)):
+        print("========================================")
+        print("       DAFTAR PRODUK HANARI BAKERY")
+        print("========================================")
+        for i in range(len(self.produk_list)):
             produk = self.produk_list[i]
-        print(f"{produk.nama} ({produk.kode})")
-        print("Jenis Roti:", produk.jenis_roti())
-        print("Harga: Rp", produk.harga_jual, "/pcs")
+            print(f"{produk.nama} ({produk.kode})")
+            print("Jenis Roti:", produk.jenis_roti())
+            print("Harga: Rp", produk.harga_jual, "/pcs")
             profit_per_pcs = produk.hitung_profit_per_produksi() / produk.jumlah_pcs
-        print("Profit per pcs: Rp", int(profit_per_pcs))
-        print("Profit per Produksi: Rp", produk.hitung_profit_per_produksi())
-        print("Jumlah Produk per Produksi: ", produk.jumlah_pcs, "/pcs")
-        print("----------------------------------------")
-        print("========================================")
-        print("          HANARI BAKERY")
-        print("========================================")
-        print("1. Tambah Produk")
-        print("2. Tampilkan Semua Produk")
-        print("3. Detail Produk")
-        print("4. Kalkulator Estimasi Profit")
-        print("5. Simulasi Proses Produksi")
-        print("6. Keluar")
-        print("========================================")
-pilihan = input("Pilih menu : ")
-    if pilihan == '1':
-        self.tambah_produk()
-    elif pilihan == '2':
-        self.tampilkan_semua_produk()
-    elif pilihan == '3':
-        self.tampilkan_detail_produk()
-    elif pilihan == '4':
-        self.kalkulator_profit()
-    elif pilihan == '5':
-        self.simulasi_produksi()
-    elif pilihan == '6':
-        print("\nTerima kasih telah menggunakan Sistem Hanari Bakery!")
-        break
-    else:
-        print("Pilihan tidak valid! Pilih antara 1-5.")
+            print("Profit per pcs: Rp", int(profit_per_pcs))
+            print("Profit per Produksi: Rp", produk.hitung_profit_per_produksi())
+            print("Jumlah Produk per Produksi: ", produk.jumlah_pcs, "/pcs")
+            print("----------------------------------------")
+            
+#menu sistem toko roti hanari
+    def run(self):
+        while True:
+            print("========================================")
+            print("          HANARI BAKERY")
+            print("========================================")
+            print("1. Tambah Produk")
+            print("2. Tampilkan Semua Produk")
+            print("3. Detail Produk")
+            print("4. Kalkulator Estimasi Profit")
+            print("5. Simulasi Proses Produksi")
+            print("6. Keluar")
+            print("========================================")
+            pilihan = input("Pilih menu : ")
+            if pilihan == '1':
+                self.tambah_produk()
+            elif pilihan == '2':
+                self.tampilkan_semua_produk()
+            elif pilihan == '3':
+                self.tampilkan_detail_produk()
+            elif pilihan == '4':
+                self.kalkulator_profit()
+            elif pilihan == '5':
+                self.simulasi_produksi()
+            elif pilihan == '6':
+                print("\nTerima kasih telah menggunakan Sistem Hanari Bakery!")
+                break
+            else:
+                print("Pilihan tidak valid! Pilih antara 1-5.")
