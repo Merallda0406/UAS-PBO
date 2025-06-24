@@ -169,7 +169,7 @@ class SistemTokoHanari:
             Muffin() ]
     def tambah_produk(self):
         kode = input("Masukkan kode: ")
-        nama = input("Masukkan nama: (rotimanis/croissant/kuekering): ")
+        nama = input("Masukkan nama: (rotimanis/croissant/buttercookies/muffin): ")
         if nama == "rotimanis":
             produk = RotiManis()
         elif nama == "croissant":
